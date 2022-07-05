@@ -1,0 +1,25 @@
+<div id="game-container" data-controller="game">
+  <table id="scoreboard">
+    <caption>High Scores</caption>
+    <thead>
+    <tr>
+      <th>#</th>
+      <th class="name">Name</th>
+      <th>Level</th>
+      <th>Turns</th>
+      <th>Time</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @scores.each_with_index do |score, i| %>
+      <tr>
+        <td><%= "#{i + 1}" %></td>
+        <td class="name"><%= "#{score[:name]}" %></td>
+        <td><%= "#{score[:level]}" %></td>
+        <td><%= "#{score[:turns]}" %></td>
+        <td><%= "#{score[:time]}" %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

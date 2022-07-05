@@ -1,0 +1,154 @@
+html, body {
+    box-sizing: border-box;
+    display: grid;
+    margin: 0;
+    padding: 0;
+    background-color: var(--beige);
+}
+
+#app {
+    display: grid;
+    grid-template-areas:
+    'header'
+    'content'
+    'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px 1fr 75px;
+    grid-gap: 1em;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+}
+
+.component {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    font-size: 1em;
+    text-align: left;
+}
+
+.component p {
+    margin: auto;
+    align-self: center;
+}
+
+#header {
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #121213;
+    padding: 0;
+}
+
+#game-container {
+    grid-area: content;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 5vw;
+    margin: auto;
+}
+
+#game-container h2 {
+    display: inline-block;
+    font-size: 4em;
+    line-height: 1em;
+    width: 10ch;
+    margin: .5em 0;
+    padding: 0;
+}
+
+#game-container p {
+    display: inline-block;
+    font-size: 1.5em;
+    line-height: 1.75em;
+    width: 40ch;
+    margin: .5em 0;
+    padding: 0;
+}
+
+#footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--maximum-yellow-red, #fcbf49ff);
+}
+
+#footer p, #footer a{
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    /*padding: 1.5em;*/
+    margin: auto 5pt;
+    color: black;
+}
+
+#footer div.hello{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#footer a{
+    padding: 5px 10px;
+    text-decoration: none;
+    border-style: solid;
+    border-width: .01pt;
+    border-radius: 5pt;
+    background-color: white;
+    color: black;
+    border-color: var(--onyx, silver);
+}
+
+#footer svg {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 28px;
+    color: black;
+}
+
+@media screen and (max-width: 1280px) {
+    #footer #role {
+        display: none;
+    }
+}
+@media screen and (max-width: 800px) {
+    #app {
+        grid-template-rows: 75px 1fr 175px;
+    }
+
+    #game-container h2 {
+        font-size: 3em;
+        width: 12ch;
+    }
+
+    #game-container p {
+        font-size: 1.3em;
+        width: 30ch;
+    }
+
+    #footer {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+
+    #footer p{
+        font-size: 1em;
+        text-align: center;
+        height: 30px;
+    }
+    #footer div.hello{
+        margin: 20pt 10pt 0 0;
+    }
+}
+
+#footer, .hidden {
+    opacity: 0;
+}

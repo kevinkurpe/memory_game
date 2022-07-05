@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+
+<h1>Hello, Rails!</h1>
+<button id="greet-user-button">Hello!</button>
+
+<script>
+    function hello(name) {
+        let greeting = "Hello, " + name + "!";
+        console.log(greeting);
+        alert(greeting);
+    }
+
+    document.addEventListener('turbolinks:load', () => {
+        const clickButton = document.getElementById("greet-user-button");
+        clickButton.addEventListener('click', (event) => {
+            hello('JavaScript')
+        });
+    });
+</script>
+
+</body>
+</html>

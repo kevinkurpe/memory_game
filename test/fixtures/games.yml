@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  score: 1
+  time: MyString
+  points_recall: 1
+  points_blind: 1
+  turns: 1
+
+two:
+  name: MyString
+  score: 1
+  time: MyString
+  points_recall: 1
+  points_blind: 1
+  turns: 1

@@ -1,0 +1,91 @@
+:root {
+    /* CSS HEX */
+    --davys-grey: #50514fff;
+    --fire-opal: #f25f5cff;
+    --naples-yellow: #ffe066ff;
+    --celadon-blue: #247ba0ff;
+    --green-sheen: #70c1b3ff;
+
+    /* www.ready.com/oD3r1D */
+    --sea-green: #008450ff;
+    --may-green: #3c913cff;
+    --olive-drab-3: #789e28ff;
+    --citron: #b4ab14ff;
+    --orange-yellow: #efb700ff;
+    --harvest-gold: #e29105ff;
+    --chocolate-web: #d46a0aff;
+    --sinopia: #c6440fff;
+    --international-orange-engineering: #b81d13ff;
+
+    --ia-blue: #15beec;
+
+    --prussian-blue: #003049ff;
+    --maximum-red: #d62828ff;
+    --orange: #f77f00ff;
+    --maximum-yellow-red: #fcbf49ff;
+    --lemon-meringue: #eae2b7ff;
+
+    --laser-lemon: #fcfc62ff;
+    --beige: #feffeaff;
+    --silver: #c9c9c9ff;
+    --quick-silver: #a3a3a3ff;
+    --onyx: #424242ff;
+
+    --xiketic: #03071eff;
+    --dark-sienna: #370617ff;
+    --rosewood: #6a040fff;
+    --dark-red: #9d0208ff;
+    --rosso-corsa: #d00000ff;
+    --vermilion: #dc2f02ff;
+    --persimmon: #e85d04ff;
+    --carrot-orange: #f48c06ff;
+    --orange-web: #faa307ff;
+    --selective-yellow: #ffba08ff;
+
+    /* Snap Original Colors */
+    --black: #000000ff;
+    --dim-gray: #616161ff;
+    --azure: #0080ffff;
+    --lemon: #fffa00ff;
+    --barbie-pink: #E6008Aff;
+}
+
+.r01 {
+    border-color: var(--sea-green);
+}
+
+.r02 {
+    border-color: var(--may-green);
+}
+
+.r03 {
+    border-color: var(--olive-drab-3);
+}
+
+.r04 {
+    border-color: var(--citron);
+}
+
+.r05 {
+    border-color: var(--orange-yellow);
+}
+
+.r06 {
+    border-color: var(--harvest-gold);
+}
+
+.r07 {
+    border-color: var(--chocolate-web);
+}
+
+.r08 {
+    border-color: var(--sinopia);
+}
+
+.r09 {
+    border-color: var(--international-orange-engineering);
+}
+
+.r10 {
+    border-color: black;
+}

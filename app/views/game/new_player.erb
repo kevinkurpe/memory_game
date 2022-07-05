@@ -1,0 +1,19 @@
+<div id="game-container" data-controller="game">
+    <div id="card-container">
+    <% @deck.each_with_index do |card,i| %>
+      <% shapes = %w[circle square triangle] %>
+      <% disp = shapes.include?(card) ? "" : card %>
+      <button data-game-id-param=<%= "#{card}#{i}" %> data-action="click->game#flip" id=<%= "#{card}#{i}" %>>
+        <div id=<%= "#{card}" %>><%= "#{disp}" %></div>
+      </button>
+    <% end %>
+  </div>
+</div>
+
+<% turns = '5' %>>
+<% time = '1:45' %>>
+
+<div id='score-board'>
+  <p id="turns"><%= turns %>></p>
+  <p id="time"><%= time %>></p>
+</div>

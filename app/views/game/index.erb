@@ -1,0 +1,18 @@
+<div id="game-container" data-controller="game" data-difficulty=<%= @difficulty %>>
+  <div id="card-container">
+
+    <% @deck.each_with_index do |card, i| %>
+      <% shapes = %w[circle square triangle] %>
+      <% disp = shapes.include?(card) ? "" : card %>
+      <button data-game-id-param=<%= "#{card}#{i}" %> data-action="click->game#flip" id=<%= "#{card}#{i}" %>>
+        <div id=<%= "#{card}" %>><%= "#{disp}" %></div>
+      </button>
+    <% end %>
+  </div>
+</div>
+
+<div id='score'>
+  <p id="turns"></p>
+  <p id=message></p>
+  <p id="timer"></p>
+</div>

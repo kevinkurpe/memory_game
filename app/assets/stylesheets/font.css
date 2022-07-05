@@ -1,0 +1,38 @@
+html, body {
+    background: white;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bungee Hairline', cursive;
+    font-weight: 900;
+    font-size: 2em;
+    letter-spacing: 7pt;
+    color: white;
+}
+
+p, li, th, td {
+    font-family: 'Bungee Hairline', cursive;
+    font-weight: 300;
+    font-size: 1em;
+    letter-spacing: 1pt;
+    color: var(--onyx, grey);
+}
+
+button {
+    font-family: 'Bungee Shade', cursive;
+    font-weight: 400;
+    font-size: 72px;
+    letter-spacing: 1pt;
+    text-transform: uppercase;
+    color: white;
+}
+
+a {
+    font-family: 'Bungee Hairline', cursive;
+    font-weight: 900;
+    font-size: 1.75em;
+    letter-spacing: 1pt;
+    color: var(--onyx, grey);
+}
