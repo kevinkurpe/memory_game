@@ -1,1 +1,1 @@
-web: npm start
+bundle exec rackup
