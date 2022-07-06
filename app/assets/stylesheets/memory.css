@@ -1,9 +1,3 @@
-body {
-    background-color: #121213;
-    height: 100vh;
-    width: 100vw;
-}
-
 #message-container {
     height: 100px;
 }
@@ -16,20 +10,27 @@ body {
 }
 
 #card-container {
-    /*width: 400px;*/
-    display: flex;
-    flex-wrap: wrap;
+    width: 90vw;
     justify-content: center;
+    display: grid;
+    gap: 1rem;
+
+    grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
+    grid-auto-rows: 175px;
+    margin: 0;
+    /*max-width: 1000px;*/
 }
 
 #card-container button {
     flex: 1 0 10%;
-    width: 125px;
-    height: 150px;
     border-radius: 5px;
     border: solid 1px #fff;
     background-color: #121213;
     margin: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 #card-container button div {
@@ -108,7 +109,6 @@ body {
     letter-spacing: 7pt;
     text-align: center;
     color: white;
-    /*background-color: var(--maximum-yellow-red, #fcbf49ff);*/
 }
 
 div#circle {
@@ -153,5 +153,42 @@ div#triangle {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    #card-container {
+        gap: 10px;
+
+        grid-template-columns: repeat(auto-fit, minmax(80px, 90px));
+        grid-auto-rows: 100px;
+    }
+    button {
+        font-size: 48px;
+    }
+}
+@media screen and (max-width: 800px) {
+    #card-container {
+        gap: 10px;
+
+        grid-template-columns: repeat(auto-fit, minmax(60px, 80px));
+        grid-auto-rows: 80px;
+    }
+    button {
+        font-size: 40px;
+    }
+    div#circle {
+        width: 30px;
+        height: 30px;
+    }
+    div#square {
+        width: 20px;
+        height: 20px;
+    }
+    div#triangle {
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
     }
 }

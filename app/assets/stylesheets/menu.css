@@ -49,19 +49,17 @@ li.services:hover a svg {
 
 
 @media screen and (max-width: 1280px) {
-    #coffee, #better, #sprint, #software {
+    #highScore, #easy, #normal, #hard {
         display: none;
-    }
-    #coffeeAlt, #betterAlt, #sprintAlt, #softwareAlt {
-        display: contents;
-    }
-    li.services {
-        padding: 0 1em 0 0;
     }
 }
 @media screen and (max-width: 800px) {
-    #coffeeAlt, #betterAlt, #sprintAlt, #softwareAlt {
-        display: none;
+    li.services a svg {
+        margin-left: 2px;
+        margin-right: 2px;
+        height: 30px;
+        width: 30px;
+        color: var(--quick-silver);
     }
     li.services {
         padding: 0;
