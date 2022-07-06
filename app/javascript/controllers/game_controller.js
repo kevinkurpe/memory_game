@@ -74,13 +74,13 @@ function determineDifficulty() {
     var difficulty = game.dataset.difficulty;
 
     if (difficulty === 'hard') {
-        matchesNeeded = 16
+        matchesNeeded = 20
     }
     if (difficulty === 'normal') {
-        matchesNeeded = 8
+        matchesNeeded = 10
     }
     if (difficulty === 'easy') {
-        matchesNeeded = 4
+        matchesNeeded = 5
     }
     console.log(difficulty)
 }
@@ -121,7 +121,7 @@ function match(idOne, idTwo) {
 
 function gameOver() {
     if (matchesMade === matchesNeeded) {
-        showMessage("You've won!");
+        showMessage("You are a winner!");
         resetGame();
     }
 }

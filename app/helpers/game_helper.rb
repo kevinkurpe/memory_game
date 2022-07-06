@@ -10,12 +10,12 @@ module GameHelper
 
   def quantity_of_cards
     if @difficulty == 'hard'
-      { alphabet_quantity: 9, shapes_quantity: 3, operators_quantity: 1, icons_quantity: 3, total_quantity: 16 }
+      { alphabet_quantity: 8, shapes_quantity: 3, operators_quantity: 1, icons_quantity: 8, total_quantity: 20 }
     elsif @difficulty == 'normal'
-      { alphabet_quantity: 3, shapes_quantity: 2, operators_quantity: 1, icons_quantity: 2, total_quantity: 8 }
+      { alphabet_quantity: 3, shapes_quantity: 2, operators_quantity: 1, icons_quantity: 4, total_quantity: 10 }
     else
       # difficulty == 'easy'
-      { alphabet_quantity: 1, shapes_quantity: 1, operators_quantity: 1, icons_quantity: 1, total_quantity: 4 }
+      { alphabet_quantity: 1, shapes_quantity: 1, operators_quantity: 1, icons_quantity: 2, total_quantity: 5 }
     end
   end
 
