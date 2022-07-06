@@ -1,0 +1,30 @@
+.ok {
+    border-color: var(--sea-green); /* r01 */
+}
+
+.ehh {
+    border-color: var(--orange-yellow); /* r05 */
+}
+
+.error {
+    border-color: var(--international-orange-engineering); /* r09 */
+}
+
+.alert {
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
