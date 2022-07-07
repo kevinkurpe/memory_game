@@ -1,5 +1,5 @@
 <div id="game-container" data-controller="game" data-difficulty=<%= @difficulty %>>
-  <div id="card-container">
+  <div id="card-container" class=<%= @difficulty %>>
 
     <% @deck.each_with_index do |card, i| %>
       <% shapes = %w[circle square triangle] %>

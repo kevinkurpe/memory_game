@@ -13,12 +13,18 @@
     width: 90vw;
     justify-content: center;
     display: grid;
-    gap: 1rem;
+    margin: 0 auto;
 
-    grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
-    grid-auto-rows: 175px;
-    margin: 0;
-    /*max-width: 1000px;*/
+    grid-template-columns: repeat(auto-fit, minmax(100px, 120px));
+    grid-auto-rows: 150px;
+    gap: 10px;
+}
+#card-container.hard {
+    /*justify-items: center;*/
+    width: 80vw;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 100px));
+    grid-auto-rows: 120px;
+    gap: 10px;
 }
 
 #card-container button {
@@ -160,10 +166,14 @@ div#triangle {
 
 @media screen and (max-width: 1280px) {
     #card-container {
-        gap: 10px;
-
         grid-template-columns: repeat(auto-fit, minmax(80px, 90px));
         grid-auto-rows: 100px;
+        gap: 10px;
+    }
+    #card-container.hard {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 80px));
+        grid-auto-rows: 80px;
+        gap: 10px;
     }
     button {
         font-size: 48px;
@@ -202,10 +212,14 @@ div#triangle {
 }
 @media screen and (max-width: 800px) {
     #card-container {
-        gap: 10px;
-
         grid-template-columns: repeat(auto-fit, minmax(60px, 80px));
         grid-auto-rows: 80px;
+        gap: 10px;
+    }
+    #card-container.hard {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 60px));
+        grid-auto-rows: 70px;
+        gap: 10px;
     }
     button {
         font-size: 40px;
