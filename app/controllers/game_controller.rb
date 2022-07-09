@@ -7,8 +7,19 @@ class GameController < ApplicationController
 
     # @deck = Game.new({ difficulty: "normal" }).build_deck
     @difficulty = params[:difficulty] || 'normal'
-    @deck = Game.new({ difficulty: @difficulty }).build_deck
-    render "game/index", title: 'Shattered View: A Novel on Rails'
+    @deck = Deck.new({ difficulty: @difficulty }).build_deck
+  end
+
+  def save
+    @game = Game.new( game_params )
+
+    respond_to do |format|
+      if @game.save
+        format.json { render json: @game, message: "The game was saved successfully." }
+      else
+        format.json { render json: @game.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def scores
@@ -36,4 +47,14 @@ class GameController < ApplicationController
     ]
   end
 
+  private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_game
+    @game = Game.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def game_params
+    params.permit(:name, :game_board, :score, :time, :points_recall, :points_blind, :turns)
+  end
 end
