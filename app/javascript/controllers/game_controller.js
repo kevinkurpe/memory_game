@@ -1,4 +1,6 @@
 import {Controller} from "@hotwired/stimulus"
+// import { FetchRequest } from '@rails/request.js'
+import { get, post, put, patch, destroy } from '@rails/request.js'
 
 export default class extends Controller {
 
@@ -122,7 +124,16 @@ function match(idOne, idTwo) {
 function gameOver() {
     if (matchesMade === matchesNeeded) {
         showMessage("You are a winner!");
+        saveScore();
         resetGame();
+    }
+}
+async function saveScore(){
+    const response = await post('/save-score', { responseKind: 'json', body: JSON.stringify({ name: 'Danielle', turns: turns, time: totalSeconds }) })
+
+    if(response.ok){
+        const json = await response.json
+        console.log(json)
     }
 }
 
