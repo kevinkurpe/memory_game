@@ -4,3 +4,4 @@ import "controllers"
 
 import LocalTime from "local-time"
 LocalTime.start()
+import "@rails/request.js"
